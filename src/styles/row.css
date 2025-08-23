@@ -1,0 +1,75 @@
+/* row.css */
+.row {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .row__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .row__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .row__scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  
+  .row__scroller::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+  }
+  
+  .row__btn {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 2;
+    transition: background 0.2s ease;
+  }
+  
+  .row__btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .row__btn--left {
+    left: 0;
+  }
+  
+  .row__btn--right {
+    right: 0;
+  }
+  
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    .row__title {
+      font-size: 1.2rem;
+    }
+  
+    .row__btn {
+      font-size: 1.5rem;
+      padding: 0 6px;
+    }
+  
+    .row__scroller {
+      gap: 0.3rem;
+    }
+  }
+  

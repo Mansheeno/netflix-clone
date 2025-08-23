@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+﻿import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import Row from "./components/Row";
+import { endpoints } from "./api/tmdb";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>MANSHEENO APP</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />               {/* Your navbar */}
+      <Banner />               {/* Top banner */}
+      
+      {/* Rows */}
+      <Row title="Trending" path={endpoints.trending} />
+      <Row title="Top Rated" path={endpoints.topRated} />
+      <Row title="Action" path={endpoints.action} />
+      <Row title="Comedy" path={endpoints.comedy} />
+      <Row title="Horror" path={endpoints.horror} />
+      <Row title="Romance" path={endpoints.romance} />
+      <Row title="Documentaries" path={endpoints.documentaries} />
     </div>
   );
 }
