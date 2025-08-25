@@ -1,18 +1,15 @@
-/* CSS Reset-ish */
-*{box-sizing:border-box}
-html,body,#root{height:100%}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";background:#141414;color:#fff}
-a{color:inherit;text-decoration:none}
-button{cursor:pointer}
-
-
-:root{
---nf-red:#e50914;
---nf-dark:#141414;
---nf-darker:#0b0b0b;
---muted:#b3b3b3;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
 
-.container{max-width:1250px;margin:0 auto;padding:0 1rem}
-.hidden{display:none}
+h1, h2, h3 {
+  line-height: 1.2;
+}

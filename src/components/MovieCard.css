@@ -1,0 +1,15 @@
+.row__poster {
+  border-radius: 4px;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.row__poster:hover {
+  transform: scale(1.09);
+}
+
+@media (max-width: 768px) {
+  .row__poster {
+    max-height: 90px;
+  }
+}

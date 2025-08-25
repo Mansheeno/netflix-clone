@@ -1,18 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./MovieCard.css";
 
-const MovieCard = ({ movie }) => {
+function MovieCard({ movie, isLargeRow }) {
+  const navigate = useNavigate();
+
   return (
-    <Link to={`/movie/${movie.id}`}>
-      <div className="movie-card">
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={movie.title}
-        />
-        <h3>{movie.title || movie.name}</h3>
-      </div>
-    </Link>
+    <img
+      onClick={() => navigate(`/movie/${movie.id}`)}
+      className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+      src={`https://image.tmdb.org/t/p/w500${
+        isLargeRow ? movie.poster_path : movie.backdrop_path
+      }`}
+      alt={movie.name}
+    />
   );
-};
+}
 
 export default MovieCard;
