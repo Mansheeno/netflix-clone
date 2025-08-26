@@ -9,7 +9,7 @@ function MovieDetails() {
   useEffect(() => {
     async function fetchMovie() {
       const request = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=YOUR_TMDB_API_KEY&language=en-US`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=73f5af5d9a6c11f8e05b002bbe7cc492&language=en-US`
       );
       setMovie(request.data);
     }
