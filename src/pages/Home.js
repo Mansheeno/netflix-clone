@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../components/Navbar";
 import Banner from "../components/Banner";
 import Row from "../components/Row";
-import requests from "../api.js";
+import requests from "../api";
 
 function Home() {
   return (
